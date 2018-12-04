@@ -1,0 +1,166 @@
+/* base */
+// ----------------------------------------------------------
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px; //база 16px
+  min-width: 320px;
+  position: relative;
+  line-height: 1.75; //оптимальное значение
+  font-family: $default-font;
+  overflow-x: hidden;
+  opacity: 1;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: underline;
+  color: $accent;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    color: lighten($accent, 15);
+  }
+}
+
+table {
+  width: 100%;
+}
+
+textarea {
+  font-family: Arial;
+}
+
+strong, b {
+  font-family: $default-font;
+  font-weight: bold;
+}
+
+em, i {
+  //font-family: $f_italic;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear {
+  clear: both;
+}
+
+.overflow {
+  overflow: hidden;
+  position: relative;
+}
+
+// buttons
+// ----------------------------------------------------------
+input, button {
+  font-family: $default-font;
+}
+
+button, input[type="submit"], input[type="button"], input[type="reset"] {
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: $accent;
+  padding: 15px 45px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .1s ease;
+
+  &::after {
+    transition: background-color .1s ease;
+    position: absolute;
+    content: '';
+    height: 4px;
+    bottom: 0;
+    width: 100%;
+    background-color: darken($accent, 50%);
+    opacity: .18;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left: 0;
+  }
+
+  &:focus, &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: lighten($accent, 5%);
+
+    &::after {
+      opacity: .22;
+    }
+  }
+
+  &:active {
+    background-color: darken($accent, 5%);
+
+    &::after {
+      opacity: .32;
+    }
+  }
+}
+
+
+

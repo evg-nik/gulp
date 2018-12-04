@@ -1,0 +1,19 @@
+{
+  "libs": [
+
+    {
+      "src":"src/js/libs/download/bootstrap-grid/bootstrap-grid.css",
+      "dest":"build/js/libs/bootstrap-grid"
+    },
+
+
+    {
+      "src":"src/js/libs/bower/font-awesome/css/font-awesome.min.css",
+      "dest":"build/js/libs/font-awesome/css"
+    },
+    {
+      "src":"src/js/libs/bower/font-awesome/fonts/**/*",
+      "dest":"build/js/libs/font-awesome/fonts"
+    }
+  ]
+}
